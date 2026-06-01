@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Myanmar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav>
+<h1 id="logo">Explore Myanmar</h1>
+
+<div class="lang-buttons">
+<button onclick="changeLanguage('eng')">ENG</button>
+<button onclick="changeLanguage('jpn')">日本語</button>
+
+</div>
+</nav>
+
+<section class="hero">
+<img src="2.jpg" class="hero-image">
+
+<div class="hero-text">
+<h2 id="welcome">Welcome to Myanmar</h2>
+<p id="intro">Explore culture, food,famous places,and festivals.</p>
+</div>
+
+</section>
+
+<section class="cards">
+
+<a href="place.html" class="card">
+<img src="3.avif">
+<h3 id="places">Places</h3>
+</a>
+
+<a href="food.html" class="card">
+<img src="8.jpeg">
+<h3 id="foods">Foods</h3>
+</a>
+
+<a href="culture.html" class="card">
+<img src="10.jpeg">
+<h3 id="culture">Culture</h3>
+</a>
+<a href="festival.html" class="card">
+<img src="20.jpeg"
+style="object-position: top;">
+<h3 id="festival">Festival</h3>
+</a>
+
+</section>
+
+<script>
+
+const languageData = {
+
+eng: {
+welcome: "Welcome to Myanmar",
+intro: "Explore culture, food,famous places,and festivals.",
+places: "Places",
+foods: "Foods",
+culture: "Culture",
+festival:"festival"
+},
+
+jpn: {
+welcome: "ミャンマーへようこそ",
+intro: "文化、食べ物、有名な場所,祭りを探検しましょう。",
+places: "観光地",
+foods: "食べ物",
+culture: "文化",
+festival:"祭り"
+}
+};
+function changeLanguage(language) {
+      document.getElementById("welcome").innerText = languageData[language].welcome;
+      document.getElementById("intro").innerText = languageData[language].intro;
+      document.getElementById("places").innerText = languageData[language].places;
+      document.getElementById("foods").innerText = languageData[language].foods;
+      document.getElementById("culture").innerText = languageData[language].culture;
+      document.getElementById("festival").innerText = languageData[language].festival;
+    }
+  </script>
+
+</body>
+</html>

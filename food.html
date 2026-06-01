@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myanmar Foods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top-buttons">
+
+    <button onclick="history.back()" class="back-btn">
+        ← Back
+    </button>
+
+    <a href="uiux.html" class="home-btn">
+        Home
+    </a>
+
+</div>
+  <nav>
+    <h1 id="Myanmarfoods">Myanmar Foods</h1>
+<div class="lang-buttons">
+<button onclick="changeLanguage('eng')">ENG</button>
+<button onclick="changeLanguage('jpn')">日本語</button>
+
+</div>
+  </nav>
+
+  <section class="cards">
+
+   <div class="card">
+      <img src="4.jpeg">
+      <h3 id="Mohinga">Mohinga</h3>
+    </div>
+
+    <div class="card">
+      <img src="7.jpeg">
+      <h3 id="Nangyithoke">Nan Gyi Thoke</h3>
+    </div>
+
+    <div class="card">
+      <img src="6.jpeg">
+      <h3 id="Laphetthoke">Laphet Thoke</h3>
+    </div>
+<div class="card">
+      <img src="9.jpeg">
+      <h3 id="Shannodle">Shan noodle</h3>
+    </div>
+
+  </section>
+<script>
+
+const languageData = {
+
+eng: {
+Myanmarfoods:"Myanmar Foods",
+Mohinga: "Mohinga",
+Nangyithoke: "Nan Gyi Thoke",
+Laphetthoke: "Laphet Thoke",
+Shannodle: "Shan noodle"
+},
+
+jpn: {
+Myanmarfoods:"ミャンマーの食べ物",
+Mohinga: "モンヒンカー",
+Nangyithoke: "ナンジートウッ",
+Laphetthoke: "ラペットウッ",
+Shannodle: "シャンヌードル"
+}
+};
+function changeLanguage(language) {
+      document.getElementById("Myanmarfoods").innerText = languageData[language].Myanmarfoods;
+      document.getElementById("Mohinga").innerText = languageData[language].Mohinga;
+      document.getElementById("Nangyithoke").innerText = languageData[language].Nangyithoke;
+      document.getElementById("Laphetthoke").innerText = languageData[language].Laphetthoke;
+      document.getElementById("Shannodle").innerText = languageData[language].Shannodle;
+    }
+
+  </script>
+
+
+</body>
+</html>

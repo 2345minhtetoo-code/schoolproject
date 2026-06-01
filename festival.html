@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festivals</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top-buttons">
+
+    <button onclick="history.back()" class="back-btn">
+        ← Back
+    </button>
+
+    <a href="uiux.html" class="home-btn">
+        Home
+    </a>
+
+</div>
+  <nav>
+    <h1 id="festival">Festivals</h1>
+<div class="lang-buttons">
+<button onclick="changeLanguage('eng')">ENG</button>
+<button onclick="changeLanguage('jpn')">日本語</button>
+  </nav>
+</div>
+
+  <section class="cards">
+
+
+ <div class="card">
+      <img src="21.jpeg"
+    style="object-position: top;">
+      <h3 id="tg">Thingyan</h3>
+    </div>
+
+    <div class="card">
+      <img src="22.jpeg">
+      <h3 id="tdg">Thadinguyt</h3>
+    </div>
+
+    <div class="card">
+      <img src="25.jpeg"
+style="object-position:center;">
+      <h3 id="tbf"> Taunggyi Balloon Festival </h3>
+    </div>
+  </section>
+<script>
+
+const languageData = {
+
+eng: {
+festival:"Festivals",
+tg: "Thingyan",
+tdg:"Thadinguyt",
+tbf:"Taunggyi Balloon Festival "
+},
+
+jpn: {
+festival: "祭り",
+tg: "ティンジャン（水かけ祭り）",
+tdg: "タディンギュット（灯明祭り）",
+tbf: "タウンジー熱気球祭り"
+}
+};
+function changeLanguage(language) {
+document.getElementById("festival").innerText = languageData[language].festival;
+document.getElementById("tg").innerText = languageData[language].tg;
+document.getElementById("tdg").innerText = languageData[language].tdg;
+document.getElementById("tbf").innerText = languageData[language].tbf;
+    }
+  </script>
+</body>
+</html>

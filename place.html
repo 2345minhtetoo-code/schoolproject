@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Famous Places</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top-buttons">
+
+    <button onclick="history.back()" class="back-btn">
+        ← Back
+    </button>
+
+    <a href="uiux.html" class="home-btn">
+        Home
+    </a>
+
+</div>
+  <nav>
+    <h1 id="fp">Famous Places</h1>
+<div class="lang-buttons">
+<button onclick="changeLanguage('eng')">ENG</button>
+<button onclick="changeLanguage('jpn')">日本語</button>
+
+</div>
+  </nav>
+
+  <section class="cards">
+
+
+ <div class="card">
+      <img src="11.jpeg">
+      <h3 id="bg">Bagan</h3>
+    </div>
+
+    <div class="card">
+      <img src="12.jpeg">
+      <h3 id="sdp">Shwedagon Pagoda</h3>
+    </div>
+
+    <div class="card">
+      <img src="13.jpeg">
+      <h3 id="il"> Inle lake</h3>
+    </div>
+<div class="card">
+      <img src="14.jpeg">
+      <h3 id="kty">Kyaiktiyo (The Golden Rock)</h3>
+    </div>
+
+  </section>
+
+<script>
+
+const languageData = {
+eng: {
+fp: "Famous Places",
+bg: "Bagan",
+sdp: "Shwedagon Pagoda",
+il: "Inle lake",
+kty: "Kyaiktiyo (The Golden Rock)",
+},
+
+jpn: {
+fp: "名所",
+bg: "バガン",
+sdp: "シュエダゴン・パゴダ",
+il: "インレー湖",
+kty: "チャイティーヨー（ゴールデンロック）",
+}
+};
+function changeLanguage(language) {
+      document.getElementById("fp").innerText = languageData[language].fp;
+      document.getElementById("bg").innerText = languageData[language].bg;
+      document.getElementById("sdp").innerText = languageData[language].sdp;
+      document.getElementById("il").innerText = languageData[language].il;
+      document.getElementById("kty").innerText = languageData[language].kty;
+    }
+
+  </script>
+
+</body>
+</html>
